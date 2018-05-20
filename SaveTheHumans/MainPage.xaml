@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage" WindowTitle="Save The Humans">
     <Page.Resources>
-        <ControlTemplate x:Key="EmptyTemplate" TargetType="{x:Type ContentControl}">
+        <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
                 <Ellipse Fill="Red" Height="100" Stroke="Black" Width="100"/>
             </Grid>
@@ -26,11 +26,11 @@
             <RowDefinition/>
             <RowDefinition Height="160"/>
         </Grid.RowDefinitions>
-        <Button x:Name="StartButton" Content="Start!" HorizontalAlignment="Center" Margin="0,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="75"/>
+        <Button x:Name="StartButton" Content="Start!" HorizontalAlignment="Center" Margin="35,67,39,58" Grid.Row="2" VerticalAlignment="Center" Width="86" Height="35" FontSize="16" Click="StartButton_Click"/>
         <ProgressBar Grid.Column="1" Grid.Row="2" Height="20"/>
         <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock TextWrapping="Wrap" Text="Avoid These" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <ContentControl Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center" Template="{DynamicResource EmptyTemplate}"/>
+            <ContentControl Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center" Template="{DynamicResource EnemyTemplate}"/>
         </StackPanel>
         <Canvas x:Name="PlayArea" Grid.Row="1" Grid.ColumnSpan="3">
             <Canvas.Background>
